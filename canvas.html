@@ -13,6 +13,12 @@
    <section>
      <h4>Here is my canvas tag:</h4>
      <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+      <script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.strokeText("Hello World", 10, 50);
+</script>
 Your browser does not support the HTML canvas tag.
 </canvas>
    </section>
