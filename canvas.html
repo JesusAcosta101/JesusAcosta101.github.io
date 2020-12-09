@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Canvas Sample</title>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="canvasStyles.css" media="screen">
+</head>
+<body>
+ <div id="mainDiv">
+   <header>
+     <h3>A Sample Canvas</h3>
+   </header>
+   <section>
+     <h4>Here is my canvas tag:</h4>
+     <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+Your browser does not support the HTML canvas tag.
+</canvas>
+   </section>
+   <br><br>
+   <footer>
+     © 2019
+   </footer>
+ </div>
+ <script>
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext("2d");
