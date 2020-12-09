@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Thank you for your information! You supplied this information:</p>
+<br>
+<p id ="key"></p>
+<script>
+var details = new Array(3)
+details[0] = prompt("Please enter your name", "Name");
+    details[1] = prompt("Please enter your Address", "Address");
+    details[2] = prompt("Please enter your occupation", "Occupation");
+    var detail="";
+    var i;
+    for(i=0;i<details.length;i++)
+    detail = detail + details[i] +"<br>"
+    document.getElementById("key").innerHTML =detail;
+</script>
+</body>
+</html>
