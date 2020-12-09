@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   </head>
+   <body>
+       <form
+       id="simpleForm"
+       action="http://www.frodriguez.net/PHPStuff/TestFormDataDelay.php"
+       method="POST"
+       >
+           <label>First name: </label>
+           <br>
+           <input type="text" name="fname" id="fname" />
+           <br><br>
+           <label>Last name: </label>
+           <br>
+           <input type="text" name="lname" id="lname" />
+           <br><br>
+           <input type="submit" id="submitBtn" value="Submit"></input>
+       </form>
+       <script>
+           $(document).ready(function () {
+               $("#simpleForm").submit(function (e) {
+                   $("#submitBtn").attr("disabled", true);
+                   $("#submitBtn").attr("value", "Loading...");
+                   return true;
+                });
+           });
+</script>
+</body>
+</html>
