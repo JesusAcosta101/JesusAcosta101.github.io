@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<style>
+  input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+  div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+  <div>
+    Number of Kids: <input type="text" id="numKids">
+    Partner Name :<input type="text" id="partner">
+    geographic location :<input type="text" id="geolocation">
+    Job Title :<input type="text" id="jobTitle">
+    <p>Click the button to display your future</p>
+    <button onclick="myFunction()" type="submit">Check Your Future</button>
+    <p id="demo"></p>
+  <script>
+    function myFunction() {
+    var numKids = document.getElementById("numKids").value;
+    var partner = document.getElementById("partner").value;
+    var geolocation = document.getElementById("geolocation").value;
+    var jobTitle = document.getElementById("jobTitle").value;
+    var future = 'You will be a '+jobTitle+' in '+geolocation+', and married to '+partner+ ' with '+numKids+ ' kids.';
+    document.getElementById("demo").innerHTML = future;
+  }
+  </script>
+  </div>
+</body>
+</html>
