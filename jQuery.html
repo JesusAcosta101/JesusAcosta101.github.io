@@ -2,6 +2,15 @@
 <html lang="en">
    <head>  
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script>
+         $(document).ready(function () {
+            $("#simpleForm").submit(function (e) {
+                $("#submitBtn").attr("disabled", true);
+                $("#submitBtn").attr("value", "Loading...");
+                return true;
+             });
+         });
+      </script>
    </head>
    <body>
        <form
@@ -19,14 +28,5 @@
            <br><br>
            <input type="submit" id="submitBtn" value="Submit"></input>
        </form>
-       <script>
-           $(document).ready(function () {
-               $("#simpleForm").submit(function (e) {
-                   $("#submitBtn").attr("disabled", true);
-                   $("#submitBtn").attr("value", "Loading...");
-                   return true;
-                });
-           });
-</script>
 </body>
 </html>
